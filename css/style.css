@@ -1,9 +1,218 @@
-body {
-    background: url(../img/pic.jpg) no-repeat center center fixed;
-    background-size: cover;
-    color: rgba(255, 255, 255, 0.9);
-    font-family: Arial;
+/* background slideshow */
+
+.bg-slideshow,
+.bg-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
 }
+
+.bg-slideshow div span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    -webkit-animation: imgAnimation 72s linear infinite 0s;
+    animation: imgAnimation 72s linear infinite 0s;
+}
+
+.bg-slideshow div div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    -webkit-animation: titleAnimation 72s linear infinite 0s;
+    animation: titleAnimation 72s linear infinite 0s;
+}
+
+.bg-slideshow div:nth-child(1) span {
+    background-image: url(../img/pic1.jpg)
+}
+
+.bg-slideshow div:nth-child(2) span {
+    background-image: url(../img/pic2.jpg);
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+}
+
+.bg-slideshow div:nth-child(3) span {
+    background-image: url(../img/pic3.jpg);
+    -webkit-animation-delay: 16s;
+    animation-delay: 16s;
+}
+
+.bg-slideshow div:nth-child(4) span {
+    background-image: url(../img/pic4.jpg);
+    -webkit-animation-delay: 24s;
+    animation-delay: 24s;
+}
+
+.bg-slideshow div:nth-child(5) span {
+    background-image: url(../img/pic5.jpg);
+    -webkit-animation-delay: 32s;
+    animation-delay: 32s;
+}
+
+.bg-slideshow div:nth-child(6) span {
+    background-image: url(../img/pic6.jpg);
+    -webkit-animation-delay: 40s;
+    animation-delay: 40s;
+}
+
+.bg-slideshow div:nth-child(7) span {
+    background-image: url(../img/pic7.jpg);
+    -webkit-animation-delay: 48s;
+    animation-delay: 48s;
+}
+
+.bg-slideshow div:nth-child(8) span {
+    background-image: url(../img/pic8.jpg);
+    -webkit-animation-delay: 56s;
+    animation-delay: 56s;
+}
+
+.bg-slideshow div:nth-child(9) span {
+    background-image: url(../img/pic9.jpg);
+    -webkit-animation-delay: 64s;
+    animation-delay: 64s;
+}
+
+.bg-slideshow div:nth-child(2) div {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+}
+
+.bg-slideshow div:nth-child(3) div {
+    -webkit-animation-delay: 16s;
+    animation-delay: 16s;
+}
+
+.bg-slideshow div:nth-child(4) div {
+    -webkit-animation-delay: 24s;
+    animation-delay: 24s;
+}
+
+.bg-slideshow div:nth-child(5) div {
+    -webkit-animation-delay: 32s;
+    animation-delay: 32s;
+}
+
+.bg-slideshow div:nth-child(6) div {
+    -webkit-animation-delay: 40s;
+    animation-delay: 40s;
+}
+
+.bg-slideshow div:nth-child(7) div {
+    -webkit-animation-delay: 48s;
+    animation-delay: 48s;
+}
+
+.bg-slideshow div:nth-child(8) div {
+    -webkit-animation-delay: 56s;
+    animation-delay: 56s;
+}
+
+.bg-slideshow div:nth-child(9) div {
+    -webkit-animation-delay: 64s;
+    animation-delay: 64s;
+}
+
+@-webkit-keyframes imgAnimation {
+    0% {
+        opacity: 0;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    8% {
+        opacity: 1;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    17% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes imgAnimation {
+    0% {
+        opacity: 0;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    8% {
+        opacity: 1;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    17% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes titleAnimation {
+    0% {
+        opacity: 0
+    }
+    8% {
+        opacity: 1
+    }
+    17% {
+        opacity: 1
+    }
+    19% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0
+    }
+    8% {
+        opacity: 1
+    }
+    17% {
+        opacity: 1
+    }
+    19% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+
+/* text & music */
 
 .stillness {
     height: 600px;
@@ -14,30 +223,70 @@ body {
     width: 100%;
 }
 
+.animated {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Arial;
+    font-size: 22px;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
 .clef {
     background: url(../img/clef.png) 0px 0px no-repeat;
     opacity: 0.6;
     height: 100px;
     width: 100px;
     position: absolute;
-	left: 90%;
+    left: 93%;
     top: 2%;
     -webkit-animation: pulse 1s ease infinite;
     animation: pulse 1s ease infinite;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
-        transform: scale(1);
     }
     50% {
         -webkit-transform: scale(1.1);
-        transform: scale(1.1);
     }
     100% {
         -webkit-transform: scale(1);
-        transform: scale(1);
     }
 }
 
@@ -54,4 +303,9 @@ body {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
 }
