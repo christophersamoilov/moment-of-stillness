@@ -214,48 +214,51 @@
 
 /* text & music */
 
-.stillness {
+.text {
     height: 600px;
     text-align: center;
     position: relative;
-    margin-bottom: 180px;
-    margin-bottom: 150px;
+    margin-top: 15%;
     width: 100%;
-}
-
-.animated {
     color: rgba(255, 255, 255, 0.9);
-    font-family: Arial;
-    font-size: 22px;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
+    display: block;
+    font: bold 44px Helvetica;
+    letter-spacing: 2px;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeOutDown {
     0% {
-        opacity: 0;
+        opacity: 1;
+        -webkit-transform: translateY(0);
     }
     100% {
-        opacity: 1;
+        opacity: 0;
+        -webkit-transform: translateY(20px);
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeOutDown {
     0% {
-        opacity: 0;
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
     100% {
-        opacity: 1;
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
     }
 }
 
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+.fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
 }
 
 .clef {
@@ -263,9 +266,14 @@
     opacity: 0.6;
     height: 100px;
     width: 100px;
-    position: absolute;
-    left: 93%;
-    top: 2%;
+    position: fixed;
+    top: 44%;
+    right: 0;
+    bottom: 0;
+    left: 48%;
+    overflow: auto;
+    color: rgba(255, 255, 255, 0.9);
+    display: block;
     -webkit-animation: pulse 1s ease infinite;
     animation: pulse 1s ease infinite;
     -webkit-animation-duration: 2s;
@@ -308,4 +316,27 @@
 .pulse {
     -webkit-animation-name: pulse;
     animation-name: pulse;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Segoe UI;
+    letter-spacing: 2px;
+    word-spacing: 0.2em;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+a:link {
+    color: rgba(255, 146, 106, 0.6);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgba(255, 211, 63, 0.6);
+}
+
+a:hover {
+    color: rgba(229, 193, 255, 0.6);
 }
